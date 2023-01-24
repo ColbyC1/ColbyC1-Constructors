@@ -31,24 +31,19 @@ public class Player {
      * @param playerName the name of the player to be created.
      */
     public Player(String playerName){
-
+        this.playerName = playerName;
+        this.level = 1;
     }
 
-    /**
-     * Again, the values of this object should be set with the help of the 'this' keyword to avoid confusion between
-     * class fields / parameter variables.
-     *
-     * this.playerName should be set to playerName. this.level should be set to level.
-     *
-     * You may notice that this constructor has the same name as the first constructor. This is allowed, so long as
-     * Java is able to differentiate between the constructors using different parameter types. This is referred to as
-     * constructor overloading.
-     *
-     * @param playerName the name of the player to be created.
-     * @param level the starting level of the player to be created.
-     */
     public Player(String playerName, int level){
+        this.playerName = playerName;
+        this.level = level;
+    }
 
+    public static void main(String[] args) {
+        Player ex = new Player("Mario");
+        Player ex1 = new Player("Luigi");
+        Player ex2 = new Player("Peach", 5);
     }
 
 }
